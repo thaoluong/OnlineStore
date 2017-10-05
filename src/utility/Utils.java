@@ -22,6 +22,7 @@ public class Utils {
 		sBrowserName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Browser);
 		if(sBrowserName.equals("Mozilla")){
 			driver = new FirefoxDriver();
+			System.setProperty("webdriver.gecko.driver", "/Users/thaoluonghong/Documents/Webdriverjav/geckodriver");
 			Log.info("New driver instantiated");
 		    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		    Log.info("Implicit wait applied on the driver for 10 seconds");
